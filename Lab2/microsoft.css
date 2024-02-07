@@ -1,0 +1,247 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Segoe UI,SegoeUI,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: rgb(38, 38, 38);
+}
+
+/* Header */
+
+.header {
+    width:90%;
+    height: 55px;
+    margin: 0 auto;
+    /* border: 1px solid black; */
+
+    display: flex;
+    position: relative;
+}
+
+.logo {
+    height: 25px;
+    margin-top: 15px;
+    margin-left: 15px;
+}
+
+.nav {
+    margin-top: 4px;
+    margin-left: 30px;
+}
+
+ul li {
+    display: inline-block;
+    font-size: 13px;
+    margin-right: 5px;
+    padding: 6px;
+    padding-top: 15px;
+    cursor: pointer;
+}
+
+li a {
+    text-decoration: none;
+    color: rgb(38, 38, 38);
+}
+
+li a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #000;
+}
+
+li a:hover::after {
+    width: 100%;
+}
+
+li:active {
+    border: 1px dashed black;
+}
+
+.nav2 {
+    position: absolute;
+    right: 0;
+    top: 10px;
+}
+
+.nav2 li {
+    padding-top: 1px;
+}
+
+button {
+    all: unset;
+}
+
+.search {
+    /* margin-top: -2px; */
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+}
+
+img.user {
+    height: 30px;
+    vertical-align: middle;
+}
+
+input {
+    padding: 5px;
+}
+
+select {
+    border: none;
+}
+
+/* Main */
+
+.main {
+    width: 100%;
+    margin: 0 auto;
+    /* background-color: rgba(128, 128, 128, 0.7); */
+}
+
+.main-text {
+    display: flex;
+    background-image: url(https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RWLAmj?ver=35aa&q=0&m=8&h=600&w=1600&b=%23FFFFFFFF&l=f&x=0&y=0&s=1898&d=712&aim=true);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 600px;
+}
+
+.p {
+    margin-top: 190px;
+    margin-left: 100px;
+    margin-right: 10px;
+    /* z-index: 1; */
+}
+
+.p p {
+    margin-bottom: 10px;
+}
+
+p a {
+    color: white;
+    text-decoration: none;
+}
+
+a.first-a {
+    font-size: 32px;
+    font-weight: 550;
+}
+
+a.third-a {
+    color: black;
+    background-color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-weight: 550;
+    margin-top: 10px;
+}
+
+a.third-a:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+
+.blocks {
+    margin: 20px auto;
+    padding-top: 30px;
+    text-align: center;
+}
+
+.column {
+    float: left;
+    width: 22%;
+    padding: 0;
+    margin-left: 5px;
+    margin: 15px;
+}
+  
+/* .blocks {margin: 0 -5px;} */
+  
+.blocks:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+  
+.card {
+    padding: 16px;
+    text-align: left;
+}
+
+.card img {
+    width: 320px;
+}
+
+h3 {
+    margin-top: 30px;
+    font-weight: 500;
+}
+
+.card > p {
+    font-size: 15px;
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+
+.card a {
+    color: #0067B8;
+    text-decoration: none;
+    font-weight: 550;
+    padding: 3px;
+    display: inline-block;
+}
+
+.card a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #0067B8;
+}
+
+.card a:hover::after {
+    width: 100%;
+}
+
+.card a:active {
+    border: 2px solid black;
+    background-color: #D8F9FD;
+}
+
+  @media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+      display: block;
+      margin-bottom: 20px;
+    }
+  }
+
+  @media screen and (min-width: 1084px) and (max-width: 1399px) {
+      .main-text {
+          background-image: url(https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RWLAmj?ver=35aa&q=0&m=8&h=472&w=1259&b=%23FFFFFFFF&l=f&x=0&y=0&s=1898&d=712&aim=true);
+          background-repeat: no-repeat;
+          background-position: center;
+      }
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1083px) {
+    .main-text {
+        background-image: url(https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RWLAmj?ver=35aa&q=0&m=8&h=609&w=1083&b=%23FFFFFFFF&l=f&x=0&y=735&s=1094&d=615&aim=true);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+
+@media screen and (min-width: 540px) and (max-width: 767px) {
+    .main-text {
+        background-image: url(https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RWLAmj?ver=35aa&q=0&m=8&h=431&w=767&b=%23FFFFFFFF&l=f&x=1131&y=919&s=767&d=431&aim=true);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
