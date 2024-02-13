@@ -48,7 +48,7 @@
   .input input {
     background: #ffffff;
     border: 1px solid #dddfe2;
-    color: #1d2129;
+    color: red;
     height: 22px;
     line-height: 16px;
     padding: 0 8px;
@@ -59,6 +59,7 @@
     height: 52px;
     border-radius: 6px;
     margin: 6px 0;
+    /* outline-color: #1877f2; */
   }
   
   .underline {
@@ -102,15 +103,6 @@
     text-decoration: none;
     color: #1c1e21;
     font-weight: 600;
-  }
-  
-  #forgot-password-href {
-    color: #1877f2;
-    font-size: 14px;
-    font-weight: 500;
-    text-decoration: none;
-    display: block;
-    margin: 6px 0;
   }
   
   #forgot-password-href:hover {
