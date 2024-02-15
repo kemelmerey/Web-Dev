@@ -11,7 +11,7 @@ function addTask(){
         listContainer.appendChild(li); //this li element will be displayed in the listContainer
 
         let span = document.createElement("span");
-        span.innerHTML = "\u00d7";
+        span.innerHTML = '';
         li.appendChild(span);
     }
     inputBox.value = "";

@@ -65,7 +65,7 @@ h1 {
 }
 
 .add-button button {
-    background-color: rgba(250,182,207,0.73);
+    background-color: rgba(57, 41, 161, 0.73);
     /*background-color: dodgerblue;*/
     color: #fff;
     border: none;
@@ -97,7 +97,7 @@ ul li::before{
     height: 28px;
     width: 28px;
     border-radius: 50%;
-    background-image: url(img/unchecked.png);
+    background-image: url(./box.png);
     background-size: cover;
     background-position: center;
     top: 12px;
@@ -110,7 +110,7 @@ ul li.checked{
 }
 
 ul li.checked::before{
-    background-image: url(img/checked.png);
+    background-image: url(./checked.png);
 }
 
 ul li span{
@@ -125,6 +125,9 @@ ul li span{
     text-align: center;
     border-radius: 50%;
     left: 250px;
+    background-image: url(./rubbish.png);
+    background-size: cover;
+    background-position: center;
 }
 
 ul li span:hover{
