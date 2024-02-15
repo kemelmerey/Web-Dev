@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //which one will be executed?
+    if (-1 || 0) alert( 'first' ); //true, bec -1 is true;
+    if (-1 && 0) alert( 'second' ); //false, bec true && false gives false;
+    if (null || -1 && 1) alert( 'third' ); //becomes if(null || 1) gives true;
+        //Answer: 1 and 3 will be executed
+</script>
+</body>
+</html>
