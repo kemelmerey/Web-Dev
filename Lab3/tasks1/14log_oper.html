@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    alert( null || 2 && 3 || 4 ); //AND has higher priority
+    // 1) (2 && 3) == 3 (if no false it returns the last one)
+    // 2) it becomes alert(null || 3 || 4);
+    // then it returns 3;
+</script>
+</body>
+</html>
