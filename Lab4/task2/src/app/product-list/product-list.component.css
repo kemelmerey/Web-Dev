@@ -1,0 +1,42 @@
+h2{
+  display: flex;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 50px;
+}
+
+.box {
+  width: 100%;
+  height: auto;
+  padding-left: 100px;
+  display: grid;
+  grid-template-columns: 400px 400px;
+  column-gap: 255px;
+}
+
+.cont {
+  width: 600px;
+  display: flex;
+  align-items: center;
+  padding-bottom: 80px;
+  padding-top: 10px;
+  padding-left: 20px;
+}
+
+img{
+  width: auto;
+  height: 300px;
+}
+
+.right{
+  padding-left: 20px;
+}
+
+.right p {
+  padding-top: 10px;
+}
+
+.buttons {
+  padding-top: 20px;
+  width: 200px;
+}
