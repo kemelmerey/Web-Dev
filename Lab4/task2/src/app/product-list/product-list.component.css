@@ -24,10 +24,9 @@ h2{
 }
 
 img{
-  width: auto;
-  height: 300px;
+  max-width:300px;
+  max-height:300px;
 }
-
 .right{
   padding-left: 20px;
 }

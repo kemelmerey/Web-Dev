@@ -1,0 +1,23 @@
+#detail {
+  margin-left: 40px;
+  justify-content: left;
+  text-align: left;
+}
+
+
+#back{
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 5px;
+  cursor: pointer;
+  margin: 10px 0 10px 0;
+  background: white;
+}
+
+#info{
+  border: 1px solid black;
+  margin-bottom: 20px;
+  width: 200px;
+  text-align: left;
+
+}

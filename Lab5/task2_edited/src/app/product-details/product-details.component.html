@@ -1,0 +1,11 @@
+<h2>Product Details</h2>
+
+<div *ngIf="product">
+    <h3>{{ product.name }}</h3>
+    <img src="{{ product.image }}" style="width: 200px">
+    <h4>{{ product.price | currency }}</h4>
+    <p>{{ product.description }}</p>
+    <button type="button" (click)="deleteProduct(product)" id="Delete">Delete</button>
+    <p>{{product.likes}}</p>
+    <button type="button" (click)="likeProduct(product)">Like</button>
+</div>

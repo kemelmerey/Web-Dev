@@ -1,0 +1,25 @@
+<div id="detail">
+  <button (click)="returnBack()" id="back">Return back</button>
+
+  <h3 *ngIf="!loaded"> Album detail is loading </h3>
+
+  <div *ngIf="loaded" style="justify-content: left;">
+    <div id="info" style="justify-content: left; padding: 10px;  border-radius: 7px">
+      <strong>ID: </strong> {{album.id}} <br>
+      <strong>UserID: </strong> {{album.userId}} <br>
+      <strong>Title: </strong> {{album.title}} <br>
+      <strong>Photo link: </strong><a routerLink="/albums/{{album.id}}/photos">Photos</a>
+    </div>
+
+
+
+    <fieldset style="width: 100px; border-radius: 5px">
+      <p style="margin-bottom: 5px">Update title</p>
+      <input type="text" [(ngModel)]="updatedAlbum.title" placeholder="Title" style="margin-bottom: 5px">
+      <button (click)="updateAlbum(album.id)" style="margin-bottom: 5px">Update</button>
+    </fieldset>
+
+  </div>
+</div>
+
+

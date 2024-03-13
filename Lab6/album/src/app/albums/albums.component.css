@@ -1,0 +1,9 @@
+#album{
+  margin-left: 30px;
+  justify-content: left;
+}
+
+#blocks{
+  border: 1px solid black;
+  height: 240px;
+}

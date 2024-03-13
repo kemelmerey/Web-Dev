@@ -1,0 +1,13 @@
+<div style="margin-left: 40px; margin-top: 20px">
+
+  <button (click)="returnBack()" id="back">Return back</button> <br>
+
+  <h3 *ngIf="!loaded">The photos are loading</h3>
+
+  <div *ngFor="let photo of Photos" style="display: inline-grid; margin: 25px 20px 0 25px">
+    <div>
+      <img src="{{photo.thumbnailUrl}}">
+    </div>
+  </div>
+
+</div>
