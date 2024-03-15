@@ -1,0 +1,29 @@
+.first{
+    background-color: white;
+  }
+  .back{
+    display: flex;
+    flex-direction: row;
+    font-family: Arial, sans-serif;
+  }
+  
+  img{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0px 2px 10px 1px rgba(71, 71, 71, 0.52); 
+    width:500px;
+  }
+  
+  h1{
+    text-align: center;
+  }
+  
+  h1{
+    text-align: center;
+    color:rgba(185, 54, 225, 0.652)
+  }
+  
+  
+  

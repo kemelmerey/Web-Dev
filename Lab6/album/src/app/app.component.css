@@ -1,10 +1,15 @@
 #header{
-  margin: 20px 0 20px 0;
+  display: flex;
+  background: rgb(154, 94, 233);
+  padding-right: 50px;
+  height: 80px;
+  flex-wrap: wrap;
+  align-content: space-around;
 }
-
 #nav li {
   display: inline;
   margin-right: 30px;
+  margin-left:0px;
   border: 1px solid #2f2e2e;
   padding: 10px;
   border-radius: 10px;

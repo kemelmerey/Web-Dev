@@ -1,0 +1,8 @@
+.TEXT{
+    font-size: 25px;
+    text-align: center;
+  }
+  
+  .TEXT li{
+    list-style-type: none;
+  }
