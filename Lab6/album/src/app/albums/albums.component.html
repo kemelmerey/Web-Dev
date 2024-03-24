@@ -13,12 +13,13 @@
   <h3 *ngIf="!loaded">The albums is loading...</h3>
 
   <div *ngFor="let album of albums" style="display: inline-flex; margin: 25px 40px 25px 0 ; width: 130px;" id="blocks">
+  
     <span style="padding: 10px; line-height: 25px">
       ID: <a routerLink="/albums/{{album.id}}"> {{album.id}} </a> <br>
       userId: {{album.userId}}  <br>
       title: {{album.title}} <br>
       <button (click)="delAlbum(album.id)">Delete</button>
-    </span>
+    </span></div>
   </div>
 
 
