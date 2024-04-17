@@ -4,10 +4,13 @@ from .models import Products, Category
 # Create your views here.
 
 #categories, category_detail, products, product_detail, category_products
-def categories(request):
-    categories = Category.objects.all()
-    categories_json = [category.to_json() for category in categories]
-    return JsonResponse(categories_json, safe=False)
+def categories(request,):
+    try:
+        category=Category.objects.all()
+        data = [item.to_json() for item in category]
+    except Category.DoesNotExist as e:
+        return JsonResponse({'message': str(e)}, status=400)
+    return JsonResponse(data, safe=False)
 
 def category_detail(request, id):
     try:

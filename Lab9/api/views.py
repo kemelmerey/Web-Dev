@@ -8,7 +8,14 @@ import json
 def companies(request):
     if request.method == 'GET':
         companies = Company.objects.all()
-        companies_json = [company.to_json() for company in companies]
+        # companies_json = [company.to_json() for company in companies]
+        companies_json = [
+
+        ]
+
+
+        for company in companies:
+            companies_json.append(company.to_json())
         return JsonResponse(companies_json, safe=False)
 
 @csrf_exempt
@@ -43,7 +50,6 @@ def vacancy_detail(request, id):
         vacancy.delete()
         return JsonResponse({'message': 'Vacancy deleted successfully'}, status=204)
 
-@csrf_exempt
 def company_vacancy(request, id):
     try:
         company = Company.objects.get(id=id)
