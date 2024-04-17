@@ -1,6 +1,6 @@
 from django.urls import path
 
-from .views import companies, company_detail, vacancies, vacancy_detail, company_vacancy, top10_vacancies
+from .views import *
 
 urlpatterns = [
     path('companies/', companies),
