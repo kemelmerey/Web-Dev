@@ -14,7 +14,7 @@ import {RouterModule} from "@angular/router";
 })
 
 export class AppComponent implements OnInit {
-  title = 'fronte';
+  title = 'hh_front';
   companies: Company[] = [];
 
   ngOnInit() {
