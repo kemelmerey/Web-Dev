@@ -3,16 +3,16 @@ import json
 from django.http.response import JsonResponse
 from ..models import Company, Vacancy
 from django.views.decorators.csrf import csrf_exempt
-# from rest_framework import status
-# from rest_framework.decorators import api_view
-# from rest_framework.request import Request
-# from rest_framework.response import Response
-#
-# from ..serializers import CompanySerializer, VacancySerializer
+from rest_framework import status
+from rest_framework.decorators import api_view
+from rest_framework.request import Request
+from rest_framework.response import Response
+
+from ..serializers import CompanySerializer, VacancySerializer
 
 
-# @api_view(["GET", "POST"])
-@csrf_exempt
+@api_view(["GET", "POST"])
+# @csrf_exempt
 def companies(request):
     if request.method == 'GET':
         companiess = Company.objects.all()
@@ -46,26 +46,26 @@ def company_detail(request, id):
         # serializer = CompanySerializer(company)
         # return Response(serializer.data)
     elif request.method == 'PUT':
-        data = json.loads(request.body)
-        name = data['name']
-        description = data['description']
-        city = data['city']
-        address = data['address']
-        company.name = name
-        company.description = description
-        company.city = city
-        company.address = address
-        company.save()
-        return JsonResponse(company.to_json())
-        # serializer = CompanySerializer(
-        #     instance=company,
-        #     data=request.data
-        # )
-        # if serializer.is_valid():
-        #     serializer.save()
-        #     return Response(serializer.data)
-        # else:
-        #     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+        # data = json.loads(request.body)
+        # name = data['name']
+        # description = data['description']
+        # city = data['city']
+        # address = data['address']
+        # company.name = name
+        # company.description = description
+        # company.city = city
+        # company.address = address
+        # company.save()
+        # return JsonResponse(company.to_json())
+        serializer = CompanySerializer(
+            instance=company,
+            data=request.data
+        )
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data)
+        else:
+            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
     elif request.method == 'DELETE':
         company.delete()
         return JsonResponse({}, status=204)

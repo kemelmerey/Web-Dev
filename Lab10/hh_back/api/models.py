@@ -1,4 +1,5 @@
 from django.db import models
+
 # Create your models here.
 
 
@@ -10,9 +11,9 @@ class Company(models.Model):
     address = models.TextField(max_length=250)
 
     class Meta:
-        verbose_name="Company"
-        verbose_name_plural="Companies"
-    
+        verbose_name = "Company"
+        verbose_name_plural = "Companies"
+        ordering = ['-id']
 
     def to_json(self):
         return {
@@ -32,8 +33,9 @@ class Vacancy(models.Model):
     company = models.ForeignKey(Company, on_delete=models.CASCADE)
 
     class Meta:
-        verbose_name="Vacancy"
-        verbose_name_plural="Vacancies"
+        verbose_name = "Vacancy"
+        verbose_name_plural = "Vacancies"
+        ordering = ['-id']
 
     def to_json(self):
         return {
